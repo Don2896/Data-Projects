@@ -110,15 +110,27 @@ Principal Component Analysis (PCA) was applied to identify underlying patterns i
 Because most of the observed variation can be captured in PC1 and PC2 a 2D scatter plot will be best to visualise the data. From the Scatter plot below, shows transaction are clustred into three groups. Cluster 0 (blue), cluster 1 (white) and cluster 2 (red). Cluster 2 transactions (red) are more spread out, with some points positioned at extreme PC1 values, possibly indicating highly suspicious transactions. Cluster 0 transactions (blue) are tightly grouped near (0, -0.5), suggesting a different fraud pattern compared to Cluster 2. we can therefore infer that:
 - PC1 captures a major fraud-related pattern (high transaction amount,short transaction timeframes).
 - PC2 captures a secondary pattern, possibly related to location changes.
-- Cluster 2 transactions might be the most anomalous, given their distribution along PC1, suggesting they have extreme fraud characteristics.
-- Cluster 0 transactions are more contained, potentially representing low-risk fraud patterns
-- Cluster 1 (single white circle) could be an edge case, either an unusual fraud case or a borderline transaction.
+- Cluster 2 could represent medium-risk behavior — not as severe as Cluster 1 but more anomalous than Cluster 0.
+- Cluster 0 represents low-risk transactions that only raise time-based flags
+- Cluster 1 This cluster likely represents high-risk transactions with multiple red flags — potentially fraud-heavy behavior.
 
 
 
 <img width="635" alt="Screenshot 2025-03-30 at 20 54 49" src="https://github.com/user-attachments/assets/4a2dea8e-0414-4242-aec3-fea7263dda66" />
+<img width="758" alt="image" src="https://github.com/user-attachments/assets/ae4cf864-7a14-4162-adb9-8a7abb9038d2" />
 
 
-conducting a kmeans clustering showed similar scatter pattern to the PCA plot. Since PCA reduces your fraud indicators (e.g., suspicious amount, location, timeframe) into a few components, similar patterns mean that the PCA transformation successfully preserved the key fraud patterns. If the PCA plot shows well-separated groups, and K-Means clusters align with them, it means K-Means is effectively detecting patterns in the data rather than random noise.
+conducting a DBSCAN clustering showed similar scatter pattern to the PCA plot. Since PCA reduces your fraud indicators (e.g., suspicious amount, location, timeframe) into a few components, similar patterns mean that the PCA transformation successfully preserved the key fraud patterns. If the PCA plot shows well-separated groups, and K-Means clusters align with them, it means K-Means is effectively detecting patterns in the data rather than random noise.
 
-<img width="644" alt="Screenshot 2025-03-30 at 21 56 37" src="https://github.com/user-attachments/assets/b5334a14-da7c-45e1-811d-41f2b19833f2" />
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/437ab961-82f8-443b-8a0d-c1681ca0e819" />
+
+---
+
+With fraudulent/suspicious transactions already determined using suspicious flags. A fraud risk score was then used to quantify how suspicious each transaction was, there for allwoing me to determine transactions that can be considered high risk. One option being to to identify transactions with the most suspicious flags, but the validity/accuracy of this is limited. Instead I used a fraud risk score based on the Euclidean distance from the origin in PCA space to quantify how anomalous each transaction is, as transactions further from the center represent unusual behavior patterns that are more likely to indicate fraud. The maximum possible fraud score being 1, i determined transactions with fraud scores greater than 0.8 should be considered high risk. The graphic below shows the distribution of fraud fraud risk scores. It is clear that the majority of tranactions have a fraud risk scores that is less than 0.2
+<img width="641" alt="image" src="https://github.com/user-attachments/assets/06d57c90-4e83-42a7-a1e2-3161cf9048c5" />
+
+The number of transactions with a fraud score greater than 0.8 was identfied to be 3. These transacions could be considered to have the highest risk of being fraudulent. Each transaction also fell into cluster 2. These tranactions were not in Cluster 1 and also had a total of 1 susspicious flag each, but still had the highest risk scores. They validate the reason for using a fraud risk score as an additional way to determine levels of fraud need for using a fraud risk score, as we would ideally expect  
+
+
+
+
