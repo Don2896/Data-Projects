@@ -131,6 +131,15 @@ With fraudulent/suspicious transactions already determined using suspicious flag
 
 The number of transactions with a fraud score greater than 0.8 was identfied to be 3. These transacions could be considered to have the highest risk of being fraudulent. Each transaction also fell into cluster 2. These tranactions were not in Cluster 1 and also had a total of 1 susspicious flag each, but still had the highest risk scores. They validate the reason for using a fraud risk score as an additional way to determine levels of fraud need for using a fraud risk score, as we would ideally expect  
 
+---
+Conclusion:
 
+This project demonstrates how unsupervised learning techniques, specifically Principal Component Analysis (PCA) combined with clustering algorithms, can be effectively used to detect potentially fraudulent bank transactions in the absence of labeled data. By engineering features such as suspicious transaction amounts, unusual geographic locations, and abnormal timeframes, the analysis was able to highlight behaviors that deviate from the norm.
+
+The application of PCA allowed for dimensionality reduction and clearer visualization of patterns in the data. When clustering was applied to this transformed space, distinct groups of transactions emerged — each with varying levels and types of risk. For instance, Cluster 0 showed minimal red flags, indicating likely legitimate behavior, whereas Clusters 1 and 2 exhibited high rates of suspicious timeframes, locations, and monetary values, suggesting different forms of potentially fraudulent activity.
+
+To quantify and prioritize these risks, a Fraud Risk Score was introduced based on the Euclidean distance from the origin in PCA space. This provided a simple but powerful way to rank transactions by risk and added an interpretable metric for stakeholders to monitor or act upon.
+
+Overall, this approach presents a practical and scalable foundation for fraud detection systems, offering data-driven insights that can enhance existing monitoring efforts. With further tuning and automation, the framework could be extended for real-time applications and continuous fraud prevention strategies.
 
 
