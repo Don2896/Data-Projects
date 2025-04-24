@@ -120,6 +120,10 @@ Because most of the observed variation can be captured in PC1 and PC2 a 2D scatt
 <img width="758" alt="image" src="https://github.com/user-attachments/assets/ae4cf864-7a14-4162-adb9-8a7abb9038d2" />
 
 
+
+
+
+
 conducting a DBSCAN clustering showed similar scatter pattern to the PCA plot. Since PCA reduces your fraud indicators (e.g., suspicious amount, location, timeframe) into a few components, similar patterns mean that the PCA transformation successfully preserved the key fraud patterns. If the PCA plot shows well-separated groups, and K-Means clusters align with them, it means K-Means is effectively detecting patterns in the data rather than random noise.
 
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/437ab961-82f8-443b-8a0d-c1681ca0e819" />
