@@ -3,7 +3,7 @@
 
 **Background Overview**:
 
-Fraud is a deceptive practice intended to result in financial or personal gain at the expense of another party. In the banking sector, fraud takes many forms, including identity theft, transaction manipulation, account takeovers, and unauthorized payments. As digital transactions increase, so does the sophistication of fraudulent activities, making it crucial for banks to develop effective detection systems to safeguard customers and financial institutions from monetary losses, reputational damage, and regulatory consequences. This project aims to analyze transactional data to identify patterns and anomalies indicative of fraudulent activity. By leveraging data analytics and machine learning techniques, the goal is to characterize fraudulent behavior in bank transactions, enabling counter-fraud agencies to enhance their detection and prevention strategies.
+Fraud is the deceptive practice intended to result in financial or personal gain at the expense of another party. In the banking sector, fraud takes many forms, including identity theft, transaction manipulation, account takeovers, and unauthorized payments. As digital transactions increase, so does the sophistication of fraudulent activities, making it crucial for banks to develop effective detection systems to safeguard customers and financial institutions from monetary losses, reputational damage, and regulatory consequences. This project aims to analyze transactional data to identify patterns and anomalies indicative of fraudulent activity. By leveraging data analytics and machine learning techniques, the goal is to characterize fraudulent behavior in bank transactions, enabling counter-fraud agencies to enhance their detection and prevention strategies.
 
 ---
 
