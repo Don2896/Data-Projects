@@ -132,6 +132,31 @@ With fraudulent/suspicious transactions already determined using suspicious flag
 The number of transactions with a fraud score greater than 0.8 was identfied to be 3. These transacions could be considered to have the highest risk of being fraudulent. Each transaction also fell into cluster 2. These tranactions were not in Cluster 1 and also had a total of 1 susspicious flag each, but still had the highest risk scores. They validate the reason for using a fraud risk score as an additional way to determine levels of fraud need for using a fraud risk score, as we would ideally expect  
 
 ---
+
+What are the characteristics of fraudulent transactions?
+
+The project explores the key characteristics of potentially fraudulent transactions using engineered features such as Suspicious_Amount, Suspicious_Location, and Suspicious_Timeframe. By applying Principal Component Analysis (PCA), the dataset was reduced into components that highlight underlying patterns in suspicious behavior. The first principal component (PC1) revealed a strong contrast between unusually high transaction amounts and very short timeframes, both of which are frequently linked to fraudulent activity. Cluster analysis further supported these insights by grouping transactions with similar behaviors, helping to pinpoint consistent patterns seen in fraud.
+
+
+How can we profile customers at risk of fraudulent activity?
+
+High-risk customer profiling was performed by aggregating suspicious activity across individual accounts. Using the sum of binary flags for each suspicious behavior, a Total_Flags score was created for every account. Accounts with high cumulative scores were flagged as potentially high-risk. Additionally, the Fraud Risk Score, calculated as the normalized Euclidean distance from the origin in PCA space, allowed for a scalable, quantitative way to prioritize accounts based on how extreme or anomalous their behavior was in comparison to others. This risk-scoring system helped to identify customers who consistently engage in patterns resembling known fraud profiles.
+
+
+Are there any identifiable trends within fraudulent transactions?
+
+Yes — the PCA and clustering techniques helped uncover visible trends. PCA visualization showed that fraud-related transactions often cluster in areas with high PC1 values, indicating behaviors like large amounts and quick repeat transactions. The clustering algorithms (K-Means and DBSCAN) revealed that many fraudulent transactions fall into distinct, high-density groups separated from more normal behavior. These clusters were consistent across both unsupervised methods, strengthening the evidence of recurring fraud patterns. Visualizations in both 2D and 3D PCA space made these trends clear and interpretable.
+
+
+How effective is the outlined process in identifying fraudulent transactions?
+
+The outlined process proved effective in identifying and highlighting transactions with fraud-like characteristics without relying on pre-labeled fraud data. The combination of feature engineering, dimensionality reduction, clustering, and scoring provided a multi-layered approach to detection. High-risk clusters aligned with top-scoring transactions, suggesting that the methods worked cohesively. While not a formal model for classification, the approach functions as a powerful unsupervised anomaly detection pipeline, useful for early detection and triage. Further validation with labeled data could enhance confidence in its predictive capabilities.
+
+
+
+
+
+---
 Conclusion:
 
 This project demonstrates how unsupervised learning techniques, specifically Principal Component Analysis (PCA) combined with clustering algorithms, can be effectively used to detect potentially fraudulent bank transactions in the absence of labeled data. By engineering features such as suspicious transaction amounts, unusual geographic locations, and abnormal timeframes, the analysis was able to highlight behaviors that deviate from the norm.
