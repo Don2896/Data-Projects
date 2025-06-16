@@ -97,7 +97,7 @@ A line plot of daily transactions for suspicious vs non-suspicious transaction s
 <img width="991" alt="Screenshot 2025-03-27 at 18 49 36" src="https://github.com/user-attachments/assets/5c2e42c0-436a-448d-9d5f-c55e20542dbf" />
 
 
-The nextr step was to use these suspicious transaction parameters to determine which customer accounts can be considered high risk. This will be accounts with the most number of suspicious flagged raised. for example, an account that read true for suspicious amounts and location will have a count of 2 total flags. There were a total of 428 accounts with with suspicious flags. The least total of flags was 3 and the most was 25. With number of flags sorted in descending order there is a significant jump in the total from the 26th to 25th account, hence we conclude these top 25 accounts can be considered to have highet risk for fraud
+The next step was to use these suspicious transaction parameters to determine which customer accounts can be considered high risk. This will be accounts with the most number of suspicious flagged raised. for example, an account that read true for suspicious amounts and location will have a count of 2 total flags. There were a total of 428 accounts with with suspicious flags. The least total of flags was 3 and the most was 25. With number of flags sorted in descending order there is a significant jump in the total from the 26th to 25th account, hence we conclude these top 25 accounts can be considered to have highet risk for fraud
 
 <img width="557" alt="Screenshot 2025-03-27 at 19 18 09" src="https://github.com/user-attachments/assets/ba78ca50-a38b-4863-999d-d0b7daf64cb3" />
 
