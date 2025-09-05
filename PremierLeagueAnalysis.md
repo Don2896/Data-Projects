@@ -1,0 +1,100 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "e823276f-de7d-4518-83b4-27e69206f1b7",
+   "metadata": {},
+   "source": [
+    "## Overview\n",
+    "This project explores player performance in the Premier League using Python, **Pandas**, **Matplotlib**, and **Seaborn**.  \n",
+    "The focus is on **position-based trends**, **scoring efficiency**, and **passing performance**, with insights drawn from per-position averages and top performers.\n",
+    "\n",
+    "The aim of this project was twofold:\n",
+    "1. To practice core data wrangling and visualisation skills in Python.  \n",
+    "2. To connect statistical outputs with meaningful football analysis.  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Key Analyses & Visualisations\n",
+    "\n",
+    "### Average Performance by Position\n",
+    "- **Goals & Assists:** Forwards and attacking midfielders dominate in scoring and chance creation.  \n",
+    "- **Passing Accuracy:** Defenders and defensive midfielders show the highest passing completion rates, reflecting their role in recycling possession with shorter, safer passes.  \n",
+    "- **Minutes Played:** Goalkeepers and defenders average the most minutes due to tactical stability, while attackers are more frequently rotated due to higher intensity workloads.  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "###  Scoring Efficiency (Goals vs xG)\n",
+    "- Scatter plot comparing actual goals to expected goals (**xG**) for the top 10 scorers.  \n",
+    "- Players above the diagonal line outperformed their xG (efficient finishers), while those below underperformed (less clinical).  \n",
+    "- *Insight:* Son Heung-min significantly exceeded his xG, making him one of the most efficient scorers.  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "### Creativity (Assists vs xA)\n",
+    "- Scatter plot comparing actual assists to expected assists (**xA**) for the top 10 assisters.  \n",
+    "- Unlike goal scorers, all top 10 assisters outperformed their xA, with Harry Kane and Marcus Rashford standing out.  \n",
+    "- *Insight:* Consistent overperformance in xA may highlight vision, creativity, and ability to generate high-value chances beyond what models expect.  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "### Passing Analysis\n",
+    "- Scatter plot of **pass volume vs pass accuracy** to highlight top 10 passers.  \n",
+    "- Defensive midfielders dominate, reflecting their tactical role in maintaining possession and controlling the tempo.  \n",
+    "- Rodri and Pierre-Emile Højbjerg stood out as elite passers (high volume *and* high accuracy).  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "### Workload Distribution\n",
+    "- Bar chart showing average minutes played by position.  \n",
+    "- Goalkeepers, defenders, and defensive midfielders showed the highest workloads with less rotation.  \n",
+    "- Attackers and attacking midfielders varied more due to the higher physical intensity of their roles and frequent substitutions.  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Tech Stack\n",
+    "- **Python 3**  \n",
+    "- **Pandas** — data wrangling  \n",
+    "- **Matplotlib & Seaborn** — visualisation  \n",
+    "\n",
+    "---\n",
+    "\n",
+    "## 📚 Skills Demonstrated\n",
+    "- Data cleaning and feature engineering (e.g., per-90 metrics).  \n",
+    "- Grouping and aggregation with Pandas.  \n",
+    "- Statistical visualisation with Matplotlib/Seaborn.  \n",
+    "- Interpreting data in a sports context (linking stats to tactics/roles).  \n",
+    "- Storytelling with data (turning charts into insights).  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ad286921-63ae-4812-8d27-a913f5e1880b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
