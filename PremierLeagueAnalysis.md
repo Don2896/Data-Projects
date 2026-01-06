@@ -1,100 +1,82 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "e823276f-de7d-4518-83b4-27e69206f1b7",
-   "metadata": {},
-   "source": [
-    "## Overview\n",
-    "This project explores player performance in the Premier League using Python, **Pandas**, **Matplotlib**, and **Seaborn**.  \n",
-    "The focus is on **position-based trends**, **scoring efficiency**, and **passing performance**, with insights drawn from per-position averages and top performers.\n",
-    "\n",
-    "The aim of this project was twofold:\n",
-    "1. To practice core data wrangling and visualisation skills in Python.  \n",
-    "2. To connect statistical outputs with meaningful football analysis.  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "## Key Analyses & Visualisations\n",
-    "\n",
-    "### Average Performance by Position\n",
-    "- **Goals & Assists:** Forwards and attacking midfielders dominate in scoring and chance creation.  \n",
-    "- **Passing Accuracy:** Defenders and defensive midfielders show the highest passing completion rates, reflecting their role in recycling possession with shorter, safer passes.  \n",
-    "- **Minutes Played:** Goalkeepers and defenders average the most minutes due to tactical stability, while attackers are more frequently rotated due to higher intensity workloads.  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "###  Scoring Efficiency (Goals vs xG)\n",
-    "- Scatter plot comparing actual goals to expected goals (**xG**) for the top 10 scorers.  \n",
-    "- Players above the diagonal line outperformed their xG (efficient finishers), while those below underperformed (less clinical).  \n",
-    "- *Insight:* Son Heung-min significantly exceeded his xG, making him one of the most efficient scorers.  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "### Creativity (Assists vs xA)\n",
-    "- Scatter plot comparing actual assists to expected assists (**xA**) for the top 10 assisters.  \n",
-    "- Unlike goal scorers, all top 10 assisters outperformed their xA, with Harry Kane and Marcus Rashford standing out.  \n",
-    "- *Insight:* Consistent overperformance in xA may highlight vision, creativity, and ability to generate high-value chances beyond what models expect.  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "### Passing Analysis\n",
-    "- Scatter plot of **pass volume vs pass accuracy** to highlight top 10 passers.  \n",
-    "- Defensive midfielders dominate, reflecting their tactical role in maintaining possession and controlling the tempo.  \n",
-    "- Rodri and Pierre-Emile Højbjerg stood out as elite passers (high volume *and* high accuracy).  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "### Workload Distribution\n",
-    "- Bar chart showing average minutes played by position.  \n",
-    "- Goalkeepers, defenders, and defensive midfielders showed the highest workloads with less rotation.  \n",
-    "- Attackers and attacking midfielders varied more due to the higher physical intensity of their roles and frequent substitutions.  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "## Tech Stack\n",
-    "- **Python 3**  \n",
-    "- **Pandas** — data wrangling  \n",
-    "- **Matplotlib & Seaborn** — visualisation  \n",
-    "\n",
-    "---\n",
-    "\n",
-    "## 📚 Skills Demonstrated\n",
-    "- Data cleaning and feature engineering (e.g., per-90 metrics).  \n",
-    "- Grouping and aggregation with Pandas.  \n",
-    "- Statistical visualisation with Matplotlib/Seaborn.  \n",
-    "- Interpreting data in a sports context (linking stats to tactics/roles).  \n",
-    "- Storytelling with data (turning charts into insights).  "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "ad286921-63ae-4812-8d27-a913f5e1880b",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.2"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Premier League Player Performance Analysis
+
+> An exploratory data analysis of Premier League player performance, examining goals, assists, expected metrics (xG/xA), passing behaviour, and workload distribution across positions to derive tactical and recruitment insights.
+
+---
+
+## Project Overview
+
+This project analyses individual player performance across the Premier League using a combination of traditional statistics and advanced metrics. The objective is to understand how player output varies by position, identify efficiency in goal creation and passing, and highlight patterns that can inform tactical decisions and recruitment strategy.
+
+---
+
+## Key Insights & Visual Analysis
+
+### 1. Goals, Assists & Passing Accuracy by Position
+
+Visualisations showing **average goals, assists, and passing accuracy by position** largely align with tactical expectations:
+
+- Players in **forward and attacking positions** score the most goals on average.
+- **Forwards and attacking midfielders** contribute the highest number of assists, reflecting their proximity to goal and creative responsibilities.
+- These players operate closest to the opposition box and are tasked with finishing and chance creation, explaining their higher attacking output.
+
+---
+
+### 2. Passing Accuracy Distribution (Box Plot)
+
+A box plot illustrating **passing accuracy distribution by position** shows:
+
+- **Defenders, defensive midfielders, and central midfielders** have the highest passing accuracy.
+- Modern football emphasises building play from the back, meaning defenders and holding midfielders frequently exchange **short, low-risk passes**.
+- This is reflected in the **tight distribution** for defensive midfielders, indicating consistency and ball security.
+
+---
+
+### 3. Goal Scoring Efficiency (xG vs Goals)
+
+A combined bar chart and scatter plot analyses the **top 10 goal scorers** and their efficiency relative to expected goals (xG):
+
+- Players above the diagonal parity line **outperformed their xG**.
+- **7 of the top 10 scorers exceeded their xG**, while 3 underperformed.
+- Players such as **Harry Kane and Mohamed Salah** marginally exceeded their xG, indicating reliable finishing.
+- **Son Heung-min** stood out as the most efficient finisher, significantly outperforming his xG.
+
+**Why this matters:**  
+xG is critical in recruitment decisions. A striker who consistently scores below xG may rely on high chance volume rather than finishing quality — a risk when investing heavily in the transfer market.
+
+A similar pattern was observed for **assists vs expected assists (xA)**:
+- All top 10 assist providers outperformed their xA.
+- **Harry Kane and Marcus Rashford** emerged as standout overperformers.
+
+---
+
+### 4. Passing Volume vs Accuracy (Top Passers)
+
+A scatter plot comparing **passing volume and accuracy** identified the league’s top 10 passers:
+
+- All were **defensive midfielders**, highlighting their role in possession recycling and tempo control.
+- **Rodri and Pierre-Emile Højbjerg** ranked highest for both volume and accuracy.
+- **Stuart Dallas and Rúben Neves** showed lower volume and accuracy relative to their peers, making them the weakest performers among the top passers.
+
+---
+
+### 5. Workload Distribution by Position
+
+A bar chart showing **average minutes played per position** reveals:
+
+- **Goalkeepers, defenders, and defensive midfielders** play the most minutes, with minimal variance.
+- **Attacking midfielders and forwards** show greater variance and lower average minutes.
+
+**Interpretation:**
+- Defensive roles form the structural base of a team, leading to less rotation.
+- Forwards rely on **explosive, high-intensity actions** (sprints, pressing, runs in behind), causing faster fatigue.
+- Managers often substitute attackers late in matches to introduce fresh attacking energy.
+
+---
+
+## Tools & Technologies
+
+- **Python** (pandas, NumPy)
+- **Data Visualisation** (matplotlib, seaborn)
+- **Jupyter Notebook**
+- **Football Analytics Metrics** (xG, xA)
